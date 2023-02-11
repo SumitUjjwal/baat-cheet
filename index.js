@@ -10,6 +10,9 @@ const io = socketio(server);
 const { userJoin, getRoomUsers,getCurrentUser, userLeaveRoom } = require("./utils/users");
 const { formatMessage } = require("./utils/messages");
 
+app.get("/", (req, res) => {
+    res.send("Welcome to Baat-Cheet")
+})
 
 const boatName = "Masai Server";
 io.on("connection", (socket) => {
