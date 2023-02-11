@@ -12,7 +12,7 @@ const room = urlParams.get('room');
 // console.log(userName, room)
 
 
-const socket = io("http://localhost:8080/", { transports: ["websocket"] });
+const socket = io("https://baat-cheet-backend.onrender.com/", { transports: ["websocket"] });
 
 socket.emit("joinRoom", { userName, room });
 
